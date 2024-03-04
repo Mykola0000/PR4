@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практична робота No4 Гложик Микола Михайлович</title>
+</head>
+<body>
+    <h1>Практична робота No4 Гложик Микола Михайлович</h1>
+    <script>
+        // Функція піднесення числа до степеня
+        function MyMathPower(base, exponent) {
+            let result = 1;
+            for (let i = 0; i < exponent; i++) {
+                result *= base;
+            }
+            console.log(`The ${exponent}th power of ${base} equals ${result}`);
+        }
+
+        // Функція MyMathPowerDefault1
+        function MyMathPowerDefault1(base = 2, exponent = 3) {
+            MyMathPower(base, exponent);
+        }
+
+        // Функція MyMathPowerDefault2
+        function MyMathPowerDefault2(base = 2, exponent = 3) {
+            MyMathPower(base, exponent);
+        }
+
+        // Функція для тестування всіх функцій
+        function TestAllFunctions() {
+            // Виклик MyMathPowerDefault1 зі значеннями за замовчуванням
+            MyMathPowerDefault1();
+
+            // Виклик MyMathPowerDefault1 з відсутнім параметром показника степеня
+            MyMathPowerDefault1(5);
+
+            // Виклик MyMathPowerDefault1 з відсутнім параметром основи степеня
+            MyMathPowerDefault1(undefined, 4);
+
+            // Виклик MyMathPowerDefault1 з відсутніми обома параметрами
+            MyMathPowerDefault1(undefined, undefined);
+
+            // Виклик MyMathPowerDefault2 зі значеннями за замовчуванням
+            MyMathPowerDefault2();
+
+            // Виклик MyMathPowerDefault2 з відсутнім параметром показника степеня
+            MyMathPowerDefault2(5);
+
+            // Виклик MyMathPowerDefault2 з відсутнім параметром основи степеня
+            MyMathPowerDefault2(undefined, 4);
+
+            // Виклик MyMathPowerDefault2 з відсутніми обома параметрами
+            MyMathPowerDefault2(undefined, undefined);
+        }
+
+        // Виклик функції для тестування всіх функцій
+        TestAllFunctions();
+    </script>
+</body>
+</html>
